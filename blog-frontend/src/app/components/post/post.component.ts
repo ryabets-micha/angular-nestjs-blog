@@ -29,7 +29,7 @@ export class PostComponent implements OnInit {
 
   private getPost() {
     this.http.get(`${server.baseURL}/blog/post/${this.id}`)
-      .subscribe(data => (this.post = data['data']))
+      .subscribe((data: PostData) => (this.post = data));
   }
 
 }

@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { CreateComponent } from './components/post/create/create.component';
 import { EditComponent } from './components/post/edit/edit.component';
 import { PostComponent } from './components/post/post.component';
+import { HomeComponent } from './components/post/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
     EditComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -25,12 +25,12 @@ export class EditComponent implements OnInit {
 
   private getPost() {
     this.http.get(`${server.baseURL}/blog/post/${this.id}`)
-      .subscribe(data => (this.post = data['data']))
+      .subscribe((data: PostData) => (this.post = data));
   }
 
   public editPost() {
     this.http.put(`${server.baseURL}/blog/edit?postID=${this.id}`, this.post)
-      .subscribe(d => console.log(d));
+      .subscribe(_ => this.navigate());
   }
 
   public navigate() {
